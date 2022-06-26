@@ -41,6 +41,10 @@ height: 64px;
 width: 64px;
 }
 .weather-temperature strong{
+    display: block;
+    position: relative;
+    top: -65px;
+    left: 75px;
     color: rgb(33, 33, 33);
     font-size: 64px;
     font-weight: 400;
@@ -49,5 +53,6 @@ width: 64px;
 .weather-temperature .units {
     position: relative;
     font-size: 16px;
-    top: -34px;
+    top: -128px; 
+    left: 150px;
 }
