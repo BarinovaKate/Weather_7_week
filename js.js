@@ -32,12 +32,22 @@ function displayTemperature(responce) {
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${responce.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", responce.data.weather[0].description);
 }
+function search(city) {
+    let apiKey = "360f33424340a0f95a8c619e705e8605";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input")
+    search(cityInputElement.value);
+}
 
 
 
-let apiKey = "360f33424340a0f95a8c619e705e8605";
-let cityName = "Kherson";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
 
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
