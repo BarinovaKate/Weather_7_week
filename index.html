@@ -13,7 +13,9 @@
 
 <body>
 <div class="container" >
-    <div class="weather-app">
+    <div class="weather-app-wrapper">
+        <div class="weather-app">
+            <div class="overview">
 <h1>
     Kherson
 </h1>
@@ -25,10 +27,15 @@
         Sunny
     </li>
 </ul>
+</div>
 <div class="row">
     <div class="col-6">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sunny">
-    25 °C|°F
+        <div class="clearfix weather-temperature">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sunny" class="float-left">
+    <div class="float-left"> <strong>25</strong> 
+        <span class="units"> <a href="#">°C</a>|<a href="#">°F</a></span> 
+    </div> 
+    </div>
     </div>
     <div class="col-6">
         <ul>
@@ -43,14 +50,15 @@
             </li>
         </ul>
     </div>
-    <small>
+    
+</div>
+
+</div>
+<small>
   <a href="https://github.com/BarinovaKate/Weather_7_week" target="_blank">Open-source code</a>, by Kate Barinova
 </small>
 </div>
 </div>
-
-</div>
-
  <script src="js.js"></script>  
 </body>
 </html>
